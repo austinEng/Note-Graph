@@ -6,17 +6,24 @@
     "start": "node ./app.js"
   },
   "dependencies": {
-    "body-parser": "^1.14.1",
+    "async": "^1.2.0",
+    "bcryptjs": "^2.1.0",
+    "body-parser": "^1.12.4",
     "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.0",
-    "express": "^4.13.3",
-    "express-session": "^1.12.1",
-    "http": "0.0.0",
-    "mongoose": "^4.2.5",
-    "morgan": "^1.6.1",
-    "passport": "^0.3.2",
-    "path": "^0.12.7",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.12.4",
+    "express-session": "^1.11.2",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^5.4.1",
+    "less-middleware": "^2.0.1",
+    "mongo-relation": "^0.5.4",
+    "mongoose": "^4.0.4",
+    "mongoose-unique-validator": "^0.4.1",
+    "morgan": "^1.5.3",
+    "nestedintervaltree": "git://github.com/austinEng/nested-interval-tree.git",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
     "serve-favicon": "^2.3.0",
-    "socket.io": "^1.3.7"
+    "socket.io": "^1.3.5"
   }
 }

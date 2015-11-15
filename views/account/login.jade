@@ -1,0 +1,40 @@
+extends ../skeleton
+
+block append head
+  link(rel='stylesheet', href='/stylesheets/login.min.css')
+  script(type='text/javascript').
+    insertCSS('.reveal { display: none }');
+
+block content
+  div.fill
+    div.vertical-center-wrapper
+      div.vertical-center
+        div.container
+          div#login-form.narrow-center-col.dark-card
+            h1.title Note Graph
+            form(method='post')
+              div.input.for_registration(style= isRegistration ? '' : 'display: none')
+                input(type='text', name='name', placeholder='Name')
+              div.input
+                input(type='text', name='email', placeholder='Email')
+              div.input
+                input(type='password', name='password', placeholder='Password')
+              div.input.for_registration(style= isRegistration ? '' : 'display: none')
+                input(type='password', name='password_confirmation', placeholder='Password Confirmation')
+              if error && error.length > 0
+                p.error.reveal=error
+              br
+              div.row
+                div#register-buttons(style= isRegistration ? '' : 'display: none')
+                  div.col-xs-6
+                    a#login-link.btn.btn-default.expand(href='/login') Login
+                  div.col-xs-6
+                    button.btn.btn-default.expand(type='submit', value='Submit') Register
+                div#login-buttons(style= isRegistration ? 'display: none' : '')
+                  div.col-xs-6
+                    button.btn.btn-default.expand(type='submit', value='Submit') Login
+                  div.col-xs-6
+                    a#register-link.btn.btn-default.expand(href='/register') Register
+
+block append footer
+  script(type='text/javascript', src='/scripts/login.js')

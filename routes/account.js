@@ -1,4 +1,5 @@
 "use strict"
+var config = require('../config');
 var flash = require('connect-flash');
 var User = require('../models/user')
 var passport = require('passport');

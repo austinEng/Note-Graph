@@ -1,7 +1,9 @@
 "use strict";
 var mongoose = require('mongoose');
+//require('mongo-relation');
 var uniqueValidator = require('mongoose-unique-validator');
 var bcrypt = require("bcryptjs");
+var Journal = require('./journal');
 
 var UserSchema = new mongoose.Schema({
   name: {
@@ -20,8 +22,12 @@ var UserSchema = new mongoose.Schema({
   },
   salt: {
     type: String
-  }
+  },
+  journals: [mongoose.Schema.ObjectId],
+  journal_titles: [String]
 });
+
+//UserSchema.hasMany('Journal', {dependent: 'delete'});
 
 UserSchema.pre('save', function (next) {
   var user = this;
@@ -55,5 +61,11 @@ UserSchema.methods.comparePassword = function (passw, cb) {
     cb(null, hash == that.password);
   });
 };
+
+UserSchema.methods.addJournal = function (journal) {
+  this.journals.push(journal);
+  this.journal_titles.push(journal.title);
+}
+
 
 module.exports = mongoose.model('User', UserSchema);

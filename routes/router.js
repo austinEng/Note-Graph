@@ -11,8 +11,9 @@ router.isAuthenticated = function (req, res, next) {
 }
 
 router.get('/', router.isAuthenticated, function (req, res) {
+  console.log(req);
   res.render('index', {
-  	
+  	journal_titles: req.user.journal_titles
   });
 });
 

@@ -1,0 +1,25 @@
+{
+  "name": "NoteGraph",
+  "description": "The Ultimate Journaling Application",
+  "main": "app.js",
+  "authors": [
+    "Austin Eng <213reeses@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  }
+}

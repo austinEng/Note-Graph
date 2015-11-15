@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0')
+
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Quicksand', type='text/css')
+
+    link(rel='stylesheet', href='/stylesheets/normalize.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/main.min.css')
+
+    script(type='text/javascript', src='/scripts/main-head.js')
+
+    <!--[if lt IE 9]>
+    <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+
+    if title
+      title= title + ' - Note Graph'
+    else
+      title Note Graph: The Ultimate Journal
+    block head
+
+  body
+    block content
+
+  footer
+    script(type='text/javascript', src='/scripts/jquery-1.11.3.min.js')
+    script(type='text/javascript', src='/scripts/bootstrap.min.js')
+    script(type='text/javascript', src='/scripts/underscore-min.js')
+    block footer

@@ -1,0 +1,39 @@
+@import (reference) './main.less';
+
+#login-form {
+
+  .title {
+    text-align: center;
+    &::after {
+      content: " ";
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: @main-text-color;
+      display: block;
+    }
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+    padding-bottom: 0px;
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: @secondary-title-color;
+    border-bottom: 1px solid @main-bg-color;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px @secondary-bg-color inset!important;
+      -webkit-text-fill-color:  @secondary-title-color!important;
+    }
+  }
+
+  p.error {
+    text-align: center;
+    color: @warning-color;
+    margin: 0px;
+  }
+}
